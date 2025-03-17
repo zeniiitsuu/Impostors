@@ -1,0 +1,17 @@
+.timer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.time-display {
+  min-width: 80px;
+  text-align: center;
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--text-primary);
+  padding: 0.5rem;
+  background-color: var(--card-bg);
+  border-radius: var(--radius-sm);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}

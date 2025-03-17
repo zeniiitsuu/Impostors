@@ -1,0 +1,42 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background with subtle texture -->
+  <rect width="600" height="200" fill="#0f1123" rx="10" ry="10" />
+  
+  <!-- Eye shape background -->
+  <ellipse cx="300" cy="100" rx="250" ry="80" fill="#1a1e33" stroke="#4361ee" stroke-width="2" />
+  
+  <!-- Moon backdrop -->
+  <circle cx="300" cy="100" r="60" fill="#f0e68c" opacity="0.7">
+    <animate attributeName="opacity" values="0.7;0.8;0.7" dur="4s" repeatCount="indefinite" />
+  </circle>
+  
+  <!-- Detective silhouette -->
+  <path d="M300 140 C285 125 275 110 275 90 C275 70 285 55 300 55 C315 55 325 70 325 90 C325 110 315 125 300 140 Z" fill="#000000" />
+  
+  <!-- Hat -->
+  <path d="M275 90 L325 90 L315 70 L285 70 Z" fill="#000000" />
+  
+  <!-- Graveyard silhouettes -->
+  <path d="M200 110 L210 90 L220 110 L200 110 Z" fill="#000000" />
+  <path d="M230 110 L240 85 L250 110 L230 110 Z" fill="#000000" />
+  <path d="M350 110 L360 85 L370 110 L350 110 Z" fill="#000000" />
+  <path d="M380 110 L390 90 L400 110 L380 110 Z" fill="#000000" />
+  
+  <!-- Magnifying glass -->
+  <circle cx="340" cy="95" r="12" fill="none" stroke="#ff3e3e" stroke-width="2.5" />
+  <line x1="348" y1="103" x2="360" y2="115" stroke="#ff3e3e" stroke-width="2.5" />
+  
+  <!-- Text with glow effect -->
+  <filter id="text-glow">
+    <feGaussianBlur stdDeviation="3" result="blur" />
+    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+  </filter>
+  
+  <text id="logo-text" x="300" y="170" font-family="Orbitron, sans-serif" font-size="48" font-weight="700" text-anchor="middle" fill="#ff3e3e" letter-spacing="2" filter="url(#text-glow)">
+    IMPOSTORS
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" />
+  </text>
+  
+  <!-- Subtle pulsing effect for text -->
+  <animate xlink:href="#logo-text" attributeName="font-size" from="48" to="49" dur="2s" repeatCount="indefinite" />
+</svg>

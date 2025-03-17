@@ -1,0 +1,32 @@
+<svg width="600" height="200" viewBox="0 0 600 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Dark background -->
+  <rect width="600" height="200" fill="#0f1123" rx="10" ry="10" />
+  
+  <!-- Mysterious eye shape -->
+  <ellipse cx="300" cy="100" rx="250" ry="70" fill="#1a1e33" stroke="#4361ee" stroke-width="2" />
+  
+  <!-- Detective silhouette -->
+  <path d="M300 140 C280 120 270 100 270 80 C270 60 280 50 300 50 C320 50 330 60 330 80 C330 100 320 120 300 140 Z" fill="#252a41" />
+  <path d="M300 130 C285 115 275 100 275 85 C275 70 285 60 300 60 C315 60 325 70 325 85 C325 100 315 115 300 130 Z" fill="#1a1e33" />
+  
+  <!-- Hat -->
+  <path d="M270 80 L330 80 L320 65 L280 65 Z" fill="#252a41" />
+  
+  <!-- Magnifying glass -->
+  <circle cx="340" cy="90" r="15" fill="none" stroke="#ff3e3e" stroke-width="3" />
+  <line x1="350" y1="100" x2="365" y2="115" stroke="#ff3e3e" stroke-width="3" />
+  
+  <!-- Text with glow effect -->
+  <filter id="glow">
+    <feGaussianBlur stdDeviation="4" result="blur" />
+    <feComposite in="SourceGraphic" in2="blur" operator="over" />
+  </filter>
+  
+  <text x="300" y="105" font-family="Orbitron, sans-serif" font-size="55" font-weight="700" text-anchor="middle" fill="#ff3e3e" letter-spacing="2" filter="url(#glow)">
+    IMPOSTORS
+    <animate attributeName="opacity" values="0.9;1;0.9" dur="3s" repeatCount="indefinite" />
+  </text>
+  
+  <!-- Subtle pulsing effect -->
+  <animate xlink:href="#logo-text" attributeName="font-size" from="55" to="56" dur="2s" repeatCount="indefinite" />
+</svg>

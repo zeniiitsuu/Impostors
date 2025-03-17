@@ -1,0 +1,120 @@
+/* Results component styling */
+
+/* Tie-breaking animation container */
+.tie-breaker-container {
+  margin: 1.5rem 0;
+  padding: 1.5rem;
+  background-color: rgba(33, 150, 243, 0.1);
+  border-radius: var(--radius-md);
+  border: 1px solid rgba(33, 150, 243, 0.2);
+  text-align: center;
+}
+
+.tie-breaker-title {
+  color: var(--accent-warning);
+  margin-bottom: 1rem;
+  font-family: var(--font-title);
+  letter-spacing: 1px;
+  font-size: 1.4rem;
+}
+
+.tie-candidates {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin: 1.5rem 0;
+  flex-wrap: wrap;
+}
+
+.tie-candidate {
+  padding: 1rem 1.5rem;
+  background: linear-gradient(145deg, var(--secondary-bg), var(--card-bg));
+  border-radius: var(--radius-md);
+  border: 2px solid transparent;
+  color: var(--text-primary);
+  font-weight: 600;
+  font-size: 1.2rem;
+  min-width: 150px;
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.tie-candidate.highlighted {
+  border-color: var(--accent-warning);
+  transform: scale(1.05);
+  box-shadow: 0 0 15px rgba(255, 152, 0, 0.4);
+  z-index: 1;
+}
+
+.tie-candidate.selected {
+  border-color: var(--accent-danger);
+  background: linear-gradient(145deg, var(--accent-danger-hover), var(--accent-danger));
+  color: white;
+  transform: scale(1.1);
+  box-shadow: 0 0 20px rgba(255, 62, 62, 0.5);
+  animation: pulse 2s infinite;
+}
+
+.tie-candidate.not-selected {
+  opacity: 0.7;
+  filter: grayscale(0.5);
+}
+
+/* Tie-breaking animation */
+@keyframes tieBreakingHighlight {
+  0% { transform: scale(1); border-color: transparent; }
+  50% { transform: scale(1.05); border-color: var(--accent-warning); }
+  100% { transform: scale(1); border-color: transparent; }
+}
+
+@keyframes finalSelection {
+  0% { transform: scale(1.05); box-shadow: 0 0 10px rgba(255, 152, 0, 0.4); }
+  50% { transform: scale(1.15); box-shadow: 0 0 25px rgba(255, 62, 62, 0.6); }
+  100% { transform: scale(1.1); box-shadow: 0 0 20px rgba(255, 62, 62, 0.5); }
+}
+
+/* Progress bar for tie-breaking animation */
+.tie-breaker-progress {
+  height: 6px;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 3px;
+  margin: 1rem auto;
+  max-width: 300px;
+  overflow: hidden;
+}
+
+.tie-breaker-progress-bar {
+  height: 100%;
+  background: linear-gradient(90deg, var(--accent-danger-hover), var(--accent-danger));
+  border-radius: 3px;
+  transition: width 0.1s linear;
+}
+
+.return-to-lobby-btn.danger {
+  background: linear-gradient(145deg, var(--accent-danger-hover), var(--accent-danger));
+  color: white;
+  border: none;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-md);
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.return-to-lobby-btn.danger:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 5px 15px rgba(255, 62, 62, 0.4);
+}
+
+.return-to-lobby-btn.danger:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+  transform: none;
+}
+
+.tie-breaker-message {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--text-secondary);
+}

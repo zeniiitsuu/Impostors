@@ -1,0 +1,100 @@
+/* Impostors Game - Design System Variables */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&family=Creepster&family=Orbitron:wght@400;500;600;700&display=swap');
+
+:root {
+  /* Typography */
+  --font-main: 'Poppins', sans-serif;
+  --font-title: 'Orbitron', sans-serif;
+  --font-special: 'Creepster', cursive;
+  
+  /* Colors - Dark Theme */
+  --primary-bg: #0f1123;
+  --secondary-bg: #1a1e33;
+  --card-bg: #252a41;
+  --border-color: rgba(255, 255, 255, 0.1);
+  
+  /* Text Colors */
+  --text-primary: rgba(255, 255, 255, 0.9);
+  --text-secondary: rgba(255, 255, 255, 0.7);
+  --text-tertiary: rgba(255, 255, 255, 0.5);
+  
+  /* Accent Colors */
+  --accent-primary: #4361ee;
+  --accent-primary-hover: #3a56d4;
+  --accent-secondary: #4cc9f0;
+  --accent-secondary-hover: #3ab8dd;
+  --accent-danger: #ff3e3e;
+  --accent-danger-hover: #e62e2e;
+  --accent-success: #4CAF50;
+  --accent-success-hover: #45a049;
+  --accent-warning: #FF9800;
+  --accent-warning-hover: #F57C00;
+  --accent-info: #2196F3;
+  --accent-info-hover: #1976D2;
+  
+  /* Spacing */
+  --space-xs: 0.25rem;
+  --space-sm: 0.5rem;
+  --space-md: 1rem;
+  --space-lg: 1.5rem;
+  --space-xl: 2rem;
+  --space-xxl: 3rem;
+  
+  /* Border Radius */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+  --radius-xl: 16px;
+  --radius-round: 50%;
+  
+  /* Shadows */
+  --shadow-sm: 0 2px 4px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 4px 8px rgba(0, 0, 0, 0.2);
+  --shadow-lg: 0 8px 16px rgba(0, 0, 0, 0.3);
+  --shadow-xl: 0 12px 24px rgba(0, 0, 0, 0.4);
+  
+  /* Transitions */
+  --transition-fast: 0.2s ease;
+  --transition-normal: 0.3s ease;
+  --transition-slow: 0.5s ease;
+  
+  /* Z-index layers */
+  --z-below: -1;
+  --z-normal: 1;
+  --z-above: 10;
+  --z-modal: 100;
+  --z-tooltip: 1000;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { transform: translateY(20px); }
+  to { transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+@keyframes glow {
+  from { text-shadow: 0 0 10px rgba(255, 62, 62, 0.5), 0 0 20px rgba(255, 62, 62, 0.3); }
+  to { text-shadow: 0 0 15px rgba(255, 62, 62, 0.7), 0 0 30px rgba(255, 62, 62, 0.5); }
+}
+
+@keyframes float {
+  0% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+  100% { transform: translateY(0px); }
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}

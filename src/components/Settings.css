@@ -1,0 +1,116 @@
+.settings-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(15, 17, 35, 0.85);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.settings-modal {
+  background-color: var(--secondary-bg);
+  border-radius: var(--radius-lg);
+  padding: var(--space-xl);
+  width: 90%;
+  max-width: 500px;
+  box-shadow: var(--shadow-lg);
+  border: 1px solid var(--border-color);
+  animation: fadeIn 0.3s ease-out;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-lg);
+}
+
+.settings-modal h2 {
+  color: var(--text-primary);
+  margin-bottom: var(--space-lg);
+  text-align: center;
+  font-family: var(--font-title);
+}
+
+.settings-section {
+  margin-bottom: var(--space-xl);
+}
+
+.settings-section label {
+  display: block;
+  color: var(--text-secondary);
+  margin-bottom: var(--space-md);
+  font-family: var(--font-main);
+}
+
+.language-options {
+  display: flex;
+  gap: var(--space-md);
+  justify-content: center;
+}
+
+.language-button {
+  padding: var(--space-md) var(--space-lg);
+  border: 2px solid var(--border-color);
+  border-radius: var(--radius-md);
+  background-color: var(--secondary-bg);
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: var(--font-main);
+  min-width: 120px;
+}
+
+.language-button.active {
+  background-color: var(--accent-primary);
+  border-color: var(--accent-primary);
+  color: white;
+}
+
+.language-button:hover:not(.active) {
+  border-color: var(--accent-primary);
+  color: var(--accent-primary);
+}
+
+.settings-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: var(--space-md);
+  margin-top: var(--space-xl);
+}
+
+.cancel-button,
+.save-button {
+  padding: var(--space-sm) var(--space-lg);
+  border-radius: var(--radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-weight: 600;
+}
+
+.cancel-button {
+  background-color: transparent;
+  border: 2px solid var(--border-color);
+  color: var(--text-secondary);
+}
+
+.save-button {
+  background-color: var(--accent-success);
+  border: none;
+  color: white;
+}
+
+.cancel-button:hover {
+  background-color: var(--border-color);
+  color: var(--text-primary);
+}
+
+.save-button:hover {
+  background-color: var(--accent-success-hover);
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: scale(0.95); }
+  to { opacity: 1; transform: scale(1); }
+}
